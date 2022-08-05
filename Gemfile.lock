@@ -7,6 +7,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
+    connection_pool (2.2.5)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     dry-inflector (0.3.0)
@@ -34,7 +35,11 @@ GEM
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
     ice_nine (0.11.2)
+    json (2.6.2)
     multipart-post (2.2.3)
+    net-http-persistent (4.0.1)
+      connection_pool (~> 2.2)
+    pg (1.4.1)
     ruby2_keywords (0.0.5)
     telegram-bot-ruby (0.19.2)
       dry-inflector
@@ -50,6 +55,9 @@ PLATFORMS
   x86_64-darwin-17
 
 DEPENDENCIES
+  json
+  net-http-persistent
+  pg
   telegram-bot-ruby
 
 BUNDLED WITH
