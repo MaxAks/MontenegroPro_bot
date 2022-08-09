@@ -1,15 +1,48 @@
 class Profession_Choice
-  def profession_choice
+
+#ПОДГОРИЦА
+
+  def profession_choice_podgorica
     Telegram::Bot::Client.run(TOKEN) do |bot|
     # ОТПРАВКА КНОПОК НАЧАЛО
       bot.listen do |message|
-        kb = 
-          Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Фотограф', callback_data: 'photographer')
+        kb = [
+            Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Уборка/Клининг', callback_data: 'cleaning'),
+            Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Кондиционеры(продажа/установка)', callback_data: 'aircond'),
+            Telegram::Bot::Types::InlineKeyboardButton.new(text: 'Фотографы/Видеографы', callback_data: 'photographer')
+              ]
           markup = Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
         bot.api.send_message(chat_id: message.from.id, text: 'Теперь выберите специальность, которая вам нужна', reply_markup: markup)
       break
       end
-#ОТПРАВКА КНОПОК КОНЕЦ
     end
   end
+
+#КОНЕЦ ПОДГОРИЦА
+
+  #БУДВА
+
+  #КОНЕЦ БУДВА
+
+  #КОТОР
+
+  #КОНЕЦ КОТОР
+  
+  #ПЕТРОВАЦ
+
+  #КОНЕЦ ПЕТРОВАЦ
+
+  #БАР
+
+  #КОНЕЦ БАР
+
+  #Герцег-Нови
+
+  #КОНЕЦ Герцег-Нови
+
+  #Ульцинь
+  
+  #КОНЕЦ Ульцинь 
+
+
 end
